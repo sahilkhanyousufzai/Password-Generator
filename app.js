@@ -44,7 +44,7 @@ btn.addEventListener("click", ()=>{
         passwordToWrite.textContent = password;
     }
     else{
-        alert("Please checked at least on box");
+        alert("Please checked at least one box");
     }
 
     feedBackDiv(arrOfFeedBack);
@@ -124,4 +124,5 @@ function showSuccess(){
     copyButton.classList.add("far", "fa-copy");
     copyButton.style.color = "";
   }, 1500);
+
 }
