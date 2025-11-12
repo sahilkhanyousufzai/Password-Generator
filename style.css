@@ -1,0 +1,238 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+
+:root {
+    --primary-color: #2b5876;
+    --secondary-color: #4e4376;
+    --weak-color: #fc8181;
+    --medium-color: #fbd38d;
+    --strong-color: #68d391;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Motserrat", sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 20px;
+}
+
+.container h1 {
+    color: var(--secondary-color);
+    font-weight: bolder;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.container h1::after {
+    content: "";
+    position: absolute;
+    background-color: var(--secondary-color);
+    bottom: -10px;
+    left: 50%;
+    width: 50%;
+    height: 3px;
+    transform: translate(-50%, -50%);
+    border: 4px;
+}
+
+.password-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+}
+
+input[type="range"] {
+    accent-color: var(--primary-color);
+    height: 6px;
+    cursor: pointer;
+}
+
+.length {
+    width: 40px;
+    height: 30px;
+    margin-left: 20px;
+    background-color: rgb(204, 218, 238);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dispaly_password {
+    display: flex;
+    background: white;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+    padding: 0.4rem 1rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.password-container .fa-solid {
+    background-color: rgb(204, 218, 238);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: gray;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.password_info {
+    background: white;
+    width: 300px;
+    padding: 0.9rem 1rem;
+    border-radius: 10px;
+}
+
+.password_info div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.check input {
+    display: none;
+    /* hide default checkbox */
+}
+
+.check .box {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #333;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 4px;
+    /* remove this if you want square */
+    background: white;
+    /* default background */
+    transition: 0.2s;
+}
+
+.check input:checked+.box {
+    background: var(--primary-color);
+    /* new background when checked */
+    border-color: var(--primary-color);
+}
+
+.check .box::after {
+    content: "";
+    display: none;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    margin-left: 4px;
+    margin-top: -1px;
+}
+
+.check input:checked+.box::after {
+    display: block;
+}
+
+.generate_password {
+    margin: 1rem 0;
+    width: 300px;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    border: none;
+    font-weight: 700;
+    color: white;
+    border-radius: 10px;
+    transition: all .2s ease;
+}
+
+.generate_password:hover {
+    background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
+    /* transform: scale(1.2); */
+}
+
+.generate_password:active {
+    transform: scale(0.9);
+}
+
+.password {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    position: relative;
+}
+
+.info_pass {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 700;
+    color: #333;
+}
+
+.colors_div {
+    margin-top: 10px;
+    width: 100%;
+    height: 10px;
+    background: rgb(206, 204, 204);
+    margin-bottom: 10px;
+    border-radius: 10px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    top: 10px;
+}
+
+.feebback_passwordColor {
+    transition: all 1s ease;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background: rgb(206, 204, 204);
+}
+
+.feebback_passwordColor.weak {
+    background-color: var(--weak-color);
+}
+
+.feebback_passwordColor.medium {
+    background-color: var(--medium-color);
+}
+
+.feebback_passwordColor.strong {
+    background-color: var(--strong-color);
+}
+
+
+@media (max-width: 420px) {
+    .container h1 {
+        font-size: 1.5rem;
+    }
+}

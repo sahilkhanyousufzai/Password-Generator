@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Password generator</title>
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+        <!-- Link of css -->
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- Main container -->
+        <div class="container">
+            <!-- Title of app -->
+            <h1>Password Generator</h1>
+
+            <!-- display the password -->
+            <div class="password-container">
+                <div class="dispaly_password">
+                    <p class="code"></p>
+                    <i class="fa-solid fa-copy"></i>
+                </div>
+
+                <!-- password Info -->
+                <div class="password_info">
+
+                    <!-- length of password -->
+                    <div class="password_lenght">
+                        <p>Password Length</p>
+                        <input type="range" id="length" min="6" max="24"
+                            value="0" />
+                        <span class="length">6</span>
+                    </div>
+
+                    <!-- Uppercase letters -->
+                    <div class="uppercase">
+                        <p>include Uppercase</p>
+                        <label class="check">
+                            <input type="checkbox" id="uppercase">
+                            <span class="box"></span>
+                        </label>
+
+                    </div>
+
+                    <!-- LowerCase -->
+                    <div class="lowercase">
+                        <p>include Lowercase</p>
+                        <label class="check">
+                            <input type="checkbox" id="lowercase">
+                            <span class="box"></span>
+                        </label>
+                    </div>
+
+                    <!-- Numbers -->
+                    <div class="numbers">
+                        <p>include Numbers</p>
+                        <label class="check">
+                            <input type="checkbox" id="numbers">
+                            <span class="box"></span>
+                        </label>
+                    </div>
+
+                    <!-- Symbols -->
+                    <div class="symbols">
+                        <p>include Symbols</p>
+                        <label class="check">
+                            <input type="checkbox" id="symbols">
+                            <span class="box"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Buttons -->
+
+            <button class="generate_password">
+                <i class="fa-solid fa-key"></i>
+                Generate password
+            </button>
+
+            <!-- password rating with colors -->
+            <div class="password">
+                <div class="info_pass">
+                    <p>Password Strength:</p>
+                    <p class="feedback_password"></p>
+                </div>
+                <div class="colors_div">
+                    <div class="feebback_passwordColor"></div>
+                </div>
+            </div>
+        </div>
+        <!-- link of js -->
+        <script src="app.js"></script>
+    </body>
+</html>
